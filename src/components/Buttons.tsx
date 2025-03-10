@@ -232,12 +232,12 @@ const Buttons: React.FC = () => {
         <div
           onClick={() => {
             if (result) {
-              setFirstNumber(String(result));
-              setOperation("+-");
+              setFirstNumber(String(result * (-1)));
+              setOperation("");
               setSecondNumber("");
               setResult(0);
             } else {
-              setOperatio("+-");
+              // setOperatio("+-");
               if (operation) {
                 setSecondNumber(String(Number(secondNumber) * -1));
               } else {
