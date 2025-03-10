@@ -11,7 +11,6 @@ const Buttons: React.FC = () => {
   const [digits, setDigits] = useState<number[]>([7, 8, 9, 4, 5, 6, 1, 2, 3]);
   const [firstNumber, setFirstNumber] = useState<string>("");
   const [secondNumber, setSecondNumber] = useState<string>("");
-  const [operatio, setOperatio] = useState<string>("");
 
   const context1 = useContext(First);
   if (!context1) {
@@ -237,7 +236,6 @@ const Buttons: React.FC = () => {
               setSecondNumber("");
               setResult(0);
             } else {
-              // setOperatio("+-");
               if (operation) {
                 setSecondNumber(String(Number(secondNumber) * -1));
               } else {
